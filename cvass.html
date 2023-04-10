@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Online Portfolio</title>
+    <script src="html2pdf.bundle.min.js"></script>
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="cv.css">
+    <!--FONTAWESOME CSS-->
+
+</head>
+
+<body>
+
+    <div class="download-area" id="pdfpdf">
+        <div class="header">
+            <img src="CHARLOTTE.png" height="120px" width="120px" alt="There should be an image here">
+            <div class="header-text">
+                <h1>CHARLOTTE MUZITE</h1>
+                <p>Web Developer</p>
+            </div>
+        </div>
+
+
+
+        <div class="content">
+            <div class="left-area">
+                <div class="contact">
+                    <h4>CONTACT</h4>
+                    <h5>Phone</h5>
+                    <p>0778 024 145</p>
+                    <h5>Email</h5>
+                    <p>muzitecharlotte@gmail.com</p>
+                    <h5>Home Address</h5>
+                    <p>2089 Low Density Chipinge Zimbabwe</p>
+                </div>
+                <div class="skills">
+                    <h1>SKILLS</h1>
+                    <div class="bars">
+                        <div class="bar">
+                            <p>Javascript</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>HTML&CSS</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>SQL</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>PYTHON</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>C++</p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="follow">
+                    <h1>FOLLOW ME</h1>
+                    <h4>Facebook</h4>
+                    <p>facebook.com/Muzite Charlotte</p>
+                    <h4>Instagram</h4>
+                    <p>Instagram.com/Taelotte_G</p>
+                    <h4>Youtube</h4>
+                    <p>Youtube.com/Taelotte</p>
+                </div>
+            </div>
+
+
+            <div class="right-area">
+                <div class="about">
+                    <h1>ABOUT ME</h1>
+                    <p>I am a hardworking and honest individual. Iam a good timekeeper and always willing to learn new
+                        skills.I am someone who is good at team work</p>
+                </div>
+                <div class="work">
+                    <h1>WORK EXPERIENCE</h1>
+
+                    <div class="work group">
+                        <h3>LEAD WEB DESIGNER</h3>
+                        <h4>BAKERTILLY</h4>
+                        <span>2020-2022</span>
+                        <p>Worked as a web designer at Bakertilly from 2020 to 2022.</p>
+                        <h3>SENIOR WEB DESIGNER</h3>
+                        <h4>HIT</h4>
+                        <span>2018-2019</span>
+                        <p>Served at HIT as a senior web developer, designing websites and maintaining them.</p>
+                    </div>
+                </div>
+                <div class="education">
+                    <h1>EDUCATION</h1>
+                    <div class="edu-group">
+                        <h4>HARARE INSTITUTE OF TECHNOLOGY</h>
+                            <p>Bachelor of Technology in Information Security and Technology</p>
+                            <p>2012-2015</p>
+                            <h4>University of Zimbabwe</h4>
+                            <p>MSc in Cybersecurity Engineering</p>
+                            <p>2016-2018</p>
+                            <h4>Parul University</h4>
+                            <p>Bachelor of Technology in Software Engineering</p>
+                            <p>2019-2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="download">Download CV</button>
+
+    <!--FONTAWESOME JS-->
+
+    <!--CUSTOM JS-->
+
+</body>
+
+<script>
+    const button = document.getElementById('download');
+
+    function generatePDF() {
+        const element = document.getElementById('pdfpdf');
+        html2pdf().from(element).save();
+    }
+    button.addEventListener('click', generatePDF);
+</script>
+
+</html>
